@@ -1,0 +1,341 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080d19;
+    color: #f1f5ff;
+}
+
+
+/* HEADER */
+
+.header {
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: #0b111f;
+
+    border-bottom: 1px solid #202a42;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.header nav {
+    display: flex;
+    gap: 25px;
+}
+
+.header nav a {
+    color: #8792aa;
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: .2s;
+}
+
+.header nav a:hover,
+.header nav a.active {
+    color: white;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 390px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #18234a 0%,
+            #0b1221 45%,
+            #080d19 100%
+        );
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.tag {
+    color: #7182ff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+
+    margin-bottom: 20px;
+}
+
+.hero p:not(.tag) {
+    color: #8d99b2;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    background: #596cff;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 22px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+.hero-button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.15);
+}
+
+
+/* PRODUCTS */
+
+.products {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 75px 25px;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-title p {
+    color: #7182ff;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+
+    margin-bottom: 12px;
+}
+
+.section-title span {
+    color: #7e8aa4;
+
+    font-size: 14px;
+}
+
+
+/* PRODUCT GRID */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* PRODUCT CARD */
+
+.product-card {
+    background: #11182a;
+
+    border: 1px solid #202b45;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    min-height: 270px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: .25s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #5365e8;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.3);
+}
+
+.product-icon {
+    width: 52px;
+    height: 52px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: #19233c;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 19px;
+
+    margin-bottom: 12px;
+}
+
+.product-card p {
+    color: #7e8aa4;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* PRODUCT FOOTER */
+
+.product-bottom {
+    margin-top: auto;
+
+    padding-top: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.product-bottom strong {
+    color: #42df91;
+
+    font-size: 11px;
+}
+
+.product-bottom a {
+    color: #8491ff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #202a42;
+
+    background: #0b111f;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    color: #68758e;
+}
+
+.footer-logo {
+    color: white;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .product-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .header nav {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 350px;
+    }
+
+}

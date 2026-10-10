@@ -1,0 +1,27 @@
+.hero-image {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 40, 100, 0.18);
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+    .hero-image {
+        padding: 10px;
+    }
+
+    .hero-image img {
+        border-radius: 12px;
+    }
+}

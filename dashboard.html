@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Basic browser security -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Great Land Tech secure administration dashboard"
+    >
+
+    <title>Great Land Tech - Secure Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            GREAT LAND TECH
+        </div>
+
+        <nav>
+            <a href="dashboard.html" class="active">
+                🏠 Dashboard
+            </a>
+
+            <a href="index.html">
+                🌐 Website
+            </a>
+
+                <a href="products.html">Product📦 </a>
+            </a>
+
+            <a href="#">
+                📊 Reports
+            </a>
+
+                <a href="settings.html" class="settings-button">
+             ⚙️ Settings
+             </a>
+    
+        </nav>
+
+        <button class="logout-btn" onclick="logout()">
+            🔒 Log Out
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div>
+                <h1>Secure Dashboard</h1>
+                <p>Great Land Tech Administration</p>
+            </div>
+
+            <div class="security-status">
+                🔐 Security Active
+            </div>
+
+        </header>
+
+
+        <!-- SECURITY WARNING -->
+        <section class="security-card">
+
+            <div class="security-icon">
+                🔐
+            </div>
+
+            <div>
+                <h2>Security Status</h2>
+
+                <p>
+                    Your dashboard is protected by authentication,
+                    session protection and account security controls.
+                </p>
+            </div>
+
+            <span class="protected">
+                PROTECTED
+            </span>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Visitors</span>
+                <strong>12,540</strong>
+                <small>+8.4% this month</small>
+            </div>
+
+            <div class="stat-card">
+                <span>Products</span>
+                <strong>248</strong>
+                <small>12 added recently</small>
+            </div>
+
+            <div class="stat-card">
+                <span>Messages</span>
+                <strong>86</strong>
+                <small>14 unread</small>
+            </div>
+
+            <div class="stat-card">
+                <span>System Status</span>
+                <strong class="online">ONLINE</strong>
+                <small>All systems operational</small>
+            </div>
+
+        </section>
+
+
+        <!-- DASHBOARD GRID -->
+        <section class="dashboard-grid">
+
+            <!-- ACTIVITY -->
+            <div class="panel">
+
+                <div class="panel-header">
+                    <h2>Recent Activity</h2>
+                    <button onclick="refreshActivity()">
+                        Refresh
+                    </button>
+                </div>
+
+                <div id="activity">
+
+                    <div class="activity">
+                        <span class="dot"></span>
+                        <div>
+                            <strong>Dashboard accessed</strong>
+                            <p>Just now</p>
+                        </div>
+                    </div>
+
+                    <div class="activity">
+                        <span class="dot"></span>
+                        <div>
+                            <strong>Product information updated</strong>
+                            <p>Today</p>
+                        </div>
+                    </div>
+
+                    <div class="activity">
+                        <span class="dot"></span>
+                        <div>
+                            <strong>Security check completed</strong>
+                            <p>Today</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECURITY -->
+            <div class="panel">
+
+                <h2>Security Controls</h2>
+
+                <div class="security-item">
+                    <span>🔑 Strong Password</span>
+                    <b>Enabled</b>
+                </div>
+
+                <div class="security-item">
+                    <span>🛡️ Authentication</span>
+                    <b>Enabled</b>
+                </div>
+
+                <div class="security-item">
+                    <span>⏱️ Session Protection</span>
+                    <b>Enabled</b>
+                </div>
+
+                <div class="security-item">
+                    <span>🚪 Logout Protection</span>
+                    <b>Enabled</b>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+        <section class="panel quick-actions">
+
+            <h2>Quick Actions</h2>
+
+            <div class="buttons">
+
+                <a href="product.html">
+                    Manage Products
+                </a>
+
+                <a href="contact.html">
+                    View Messages
+                </a>
+
+                <button onclick="securityCheck()">
+                    Run Security Check
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <p>
+                © 2026 Great Land Tech |
+                Secure Administration System
+            </p>
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        /*
+         * SECURITY NOTE:
+         * This JavaScript is only a front-end demonstration.
+         * Do NOT store real passwords in this file.
+         */
+
+        function securityCheck() {
+
+            alert(
+                "Security check completed.\n\n" +
+                "✓ Dashboard connection checked\n" +
+                "✓ Session status checked\n" +
+                "✓ Security controls checked"
+            );
+        }
+
+
+        function refreshActivity() {
+
+            alert("Activity information refreshed.");
+        }
+
+
+        function logout() {
+
+            const confirmLogout =
+                confirm("Are you sure you want to log out?");
+
+            if (confirmLogout) {
+
+                /*
+                 * In a real application this should call
+                 * the server to destroy the user's session.
+                 */
+
+                window.location.href = "index.html";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
